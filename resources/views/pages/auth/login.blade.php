@@ -30,7 +30,7 @@
                         @endif
                     </div>
                     <div class="form-group text-right">
-                        <a href="forgot-password.html">Forgot your password?</a>
+                        <a href="{{ route('auth.forget') }}">Forgot your password?</a>
                     </div>
                     <div class="form-group text-center">
                         <button type="submit" class="btn btn-primary account-btn">Login</button>

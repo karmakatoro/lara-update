@@ -17,7 +17,7 @@
                         <button class="btn btn-primary account-btn" type="submit">Reset Password</button>
                     </div>
                     <div class="text-center register-link">
-                        <a href="login.html">Back to Login</a>
+                        <a href="{{ route('auth.login') }}">Back to Login</a>
                     </div>
                 </form>
             </div>

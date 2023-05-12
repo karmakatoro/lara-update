@@ -24,6 +24,8 @@ Route::get('/', function () {
 // Auth routes
 Route::get('/login', [AuthController::class, 'index'])->name('auth.login');
 Route::post('/login', [AuthController::class, 'connect'])->name('auth.connect');
+Route::get('/forgot', [AuthController::class, 'forget'])->name('auth.forget');
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Dashboard routes
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
