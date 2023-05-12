@@ -28,7 +28,8 @@ Route::get('/forgot', [AuthController::class, 'forget'])->name('auth.forget');
 Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Dashboard routes
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('dashboard', [DashboardController::class, 'index'])
+->name('dashboard')->middleware('auth');
 
 
 
