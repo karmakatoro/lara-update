@@ -1,5 +1,7 @@
 @extends('layout.base')
 
+@section('title', 'Login | '.env('APP_NAME'))
+
 @section('content')
 <div class="main-wrapper account-wrapper">
     <div class="account-page">

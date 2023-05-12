@@ -1,5 +1,7 @@
 @extends('layout.base')
 
+@section('title', 'Dashboard | '.env('APP_NAME'))
+
 @section('content')
 
 <div class="main-wrapper">
