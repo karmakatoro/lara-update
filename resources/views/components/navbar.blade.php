@@ -1,6 +1,6 @@
 <div class="header">
     <div class="header-left">
-        <a href="index-2.html" class="logo">
+        <a href="{{ route('dashboard') }}" class="logo">
             <img src="assets/img/logo.png" width="35" height="35" alt=""> <span>Preclinic</span>
         </a>
     </div>
