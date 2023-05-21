@@ -12,8 +12,24 @@
     <div class="page-wrapper">
         @if(request()->route()->getName()=='settings')
         @include('pages.settings.company')
-        @elseif (request()->route()->getName()=='localization.index')
+        @elseif (request()->route()->getName()=='localization-settings.index')
         @include('pages.settings.localization')
+        @elseif (request()->route()->getName()=='theme-settings.index')
+        @include('pages.settings.theme')
+        @elseif (request()->route()->getName()=='roles-permissions-settings.index')
+        @include('pages.settings.roles-permissions')
+        @elseif (request()->route()->getName()=='email-settings.index')
+        @include('pages.settings.email')
+        @elseif (request()->route()->getName()=='invoice-settings.index')
+        @include('pages.settings.invoice')
+        @elseif (request()->route()->getName()=='salary-settings.index')
+        @include('pages.settings.salary')
+        @elseif (request()->route()->getName()=='notifications-settings.index')
+        @include('pages.settings.notifications')
+        @elseif (request()->route()->getName()=='leave-type-settings.index')
+        @include('pages.settings.leave-type')
+        @elseif (request()->route()->getName()=='change-password-settings')
+        @include('pages.settings.change-password')
         @endif
     </div>
 
