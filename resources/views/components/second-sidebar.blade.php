@@ -10,7 +10,7 @@
                     <a href="{{ route('settings') }}"><i class="fa fa-building"></i> <span>Company Settings</span></a>
                 </li>
                 <li>
-                    <a href="localization.html"><i class="fa fa-clock-o"></i> <span>Localization</span></a>
+                    <a href="{{ route('localization.index') }}"><i class="fa fa-clock-o"></i> <span>Localization</span></a>
                 </li>
                 <li>
                     <a href="theme-settings.html"><i class="fa fa-picture-o"></i> <span>Theme Settings</span></a>

@@ -13,7 +13,7 @@ class LocalizationController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.settings');
     }
 
     /**

@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.min.css') }}">
+
     <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
@@ -26,9 +28,10 @@
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
     @if(request()->route()->getName()=='dashboard')
-    <script src="{{ asset('assets/js/Chart.bundle.js') }}"></script>
-    <script src="{{ asset('assets/js/chart.js') }}"></script>
+        <script src="{{ asset('assets/js/Chart.bundle.js') }}"></script>
+        <script src="{{ asset('assets/js/chart.js') }}"></script>
     @endif
+    <script src="{{ asset('assets/js/select2.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
 
 </body>
