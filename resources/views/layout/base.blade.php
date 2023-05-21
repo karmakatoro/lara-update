@@ -28,8 +28,8 @@
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
     @if(request()->route()->getName()=='dashboard')
-        <script src="{{ asset('assets/js/Chart.bundle.js') }}"></script>
-        <script src="{{ asset('assets/js/chart.js') }}"></script>
+    <script src="{{ asset('assets/js/Chart.bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/chart.js') }}"></script>
     @endif
     <script src="{{ asset('assets/js/select2.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
