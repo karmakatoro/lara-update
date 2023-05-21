@@ -18,14 +18,17 @@
 </head>
 
 <body>
-@yield('content')
+    @yield('content')
 
+    <div class="sidebar-overlay" data-reff=""></div>
     <script src="{{ asset('assets/js/jquery-3.6.3.min.js') }}"></script>
-	<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
+    @if(request()->route()->getName()=='dashboard')
     <script src="{{ asset('assets/js/Chart.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/chart.js') }}"></script>
+    @endif
     <script src="{{ asset('assets/js/app.js') }}"></script>
 
 </body>
