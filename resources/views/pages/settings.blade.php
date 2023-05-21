@@ -8,5 +8,7 @@
         @include('components.navbar')
         {{-- Include second sidebar --}}
         @include('components.second-sidebar')
+        {{-- Include main content --}}
+        @include('pages.settings.company')
     </div>
 @endsection
