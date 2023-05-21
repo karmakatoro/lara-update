@@ -3,11 +3,11 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="index-2.html"><i class="fa fa-home back-icon"></i> <span>Back to Home</span></a>
+                    <a href="{{ route('dashboard') }}"><i class="fa fa-home back-icon"></i> <span>Back to Home</span></a>
                 </li>
                 <li class="menu-title">Settings</li>
                 <li class="active">
-                    <a href="settings.html"><i class="fa fa-building"></i> <span>Company Settings</span></a>
+                    <a href="{{ route('settings') }}"><i class="fa fa-building"></i> <span>Company Settings</span></a>
                 </li>
                 <li>
                     <a href="localization.html"><i class="fa fa-clock-o"></i> <span>Localization</span></a>
