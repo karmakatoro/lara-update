@@ -34,7 +34,7 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 // Settings routes
 Route::get('/settings', function(){
     return view('pages.settings');
-});
+})->name('settings');
 Route::resource('/company', CompanyController::class);
 
 
