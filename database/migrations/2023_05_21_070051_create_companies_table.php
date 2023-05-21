@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('state')->nullable();
             $table->string('email');
             $table->string('website_url')->nullable();
-            $table->string('phone_number');
             $table->string('mobile_number')->nullable();
             $table->timestamps();
 
