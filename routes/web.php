@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LocalizationController;
+use App\Models\Localization;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,7 @@ Route::get('/settings', function(){
     return view('pages.settings');
 })->name('settings');
 Route::resource('/company', CompanyController::class);
+Route::resource('/localization', LocalizationController::class);
 
 
 
