@@ -26,17 +26,19 @@ class AuthController extends Controller
     }
     public function change_password(Request $request)
     {
-        $request->validate([
-            'old'=>'required',
-            'new'=>'required|min:6',
-            'conf'=> 'required|min:6'
+        $validateData = $request->validate([
+            'old_password' => 'required',
+            'password' => 'required|confirmed|min:8'
         ]);
-        $credentials = $request->only('old');
-        if(Auth::attempt($credentials)){
-            if($request->new == $request->conf){
-                User::updated([ 'password' => Hash::make($request->new)]);
-            }
+        $user = Auth::user();
+        if(!Hash::check($request->old_password, $user->password)){
+            return redirect()->route('change-password-settings')->with('error', 'Invalid old password');
         }
+
+        $user->update([
+            'password' => Hash::make($validateData['password'])
+        ]);
+        return redirect()->route('change-password-settings')->with('success', 'Password updated');
     }
     public function forget()
     {
