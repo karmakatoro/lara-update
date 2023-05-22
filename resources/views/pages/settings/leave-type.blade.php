@@ -1,3 +1,6 @@
+@extends('pages.settings')
+
+@section('subcontent')
 <div class="content">
     <div class="row">
         <div class="col-sm-8 col-5">
@@ -108,4 +111,4 @@
         </div>
     </div>
 </div>
-
+@endsection
