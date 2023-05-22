@@ -89,7 +89,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ route('settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                    <a href="{{ route('company-settings.index') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                 </li>
             </ul>
         </div>
