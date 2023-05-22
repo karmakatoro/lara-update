@@ -6,6 +6,8 @@ use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     public function index()
@@ -21,6 +23,20 @@ class AuthController extends Controller
     }
     public function show_change_password(){
         return view('pages.settings.change-password');
+    }
+    public function change_password(Request $request)
+    {
+        $request->validate([
+            'old'=>'required',
+            'new'=>'required|min:6',
+            'conf'=> 'required|min:6'
+        ]);
+        $credentials = $request->only('old');
+        if(Auth::attempt($credentials)){
+            if($request->new == $request->conf){
+                User::updated([ 'password' => Hash::make($request->new)]);
+            }
+        }
     }
     public function forget()
     {
