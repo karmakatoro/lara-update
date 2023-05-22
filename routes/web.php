@@ -39,10 +39,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // Dashboard routes
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
-// Settings routes
-Route::get('/settings', function(){
-    return view('pages.settings');
-})->name('settings');
+// Settings routes;
 Route::resource('/company-settings', CompanyController::class);
 Route::resource('/localization-settings', LocalizationController::class);
 Route::resource('/theme-settings', ThemeController::class);
