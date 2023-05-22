@@ -13,7 +13,7 @@ class LeaveTypeController extends Controller
      */
     public function index()
     {
-        return view('pages.settings');
+        return view('pages.settings.leave-type');
     }
 
     /**
@@ -21,7 +21,7 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
-        return view('pages.settings');
+        return view('pages.settings.forms-leave-type');
     }
 
     /**

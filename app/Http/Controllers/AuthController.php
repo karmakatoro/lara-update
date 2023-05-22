@@ -20,7 +20,7 @@ class AuthController extends Controller
         return redirect()->route('auth.login')->with('error', 'Invalid credentials');
     }
     public function show_change_password(){
-        return view('pages.settings');
+        return view('pages.settings.change-password');
     }
     public function forget()
     {
