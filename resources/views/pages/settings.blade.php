@@ -30,6 +30,12 @@
         @include('pages.settings.leave-type')
         @elseif (request()->route()->getName()=='change-password-settings')
         @include('pages.settings.change-password')
+
+        {{-- Leave Type (Create and Edit) --}}
+        @elseif (request()->route()->getName()=='leave-type-settings.create')
+        @include('pages.settings.forms-leave-type')
+        @elseif (request()->route()->getName()=='leave-type-settings.edit')
+        @include('pages.settings.forms-leave-type')
         @endif
     </div>
 
