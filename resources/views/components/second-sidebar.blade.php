@@ -6,8 +6,8 @@
                     <a href="{{ route('dashboard') }}"><i class="fa fa-home back-icon"></i> <span>Back to Home</span></a>
                 </li>
                 <li class="menu-title">Settings</li>
-                <li class="@if(request()->route()->getName()=='settings') active @endif">
-                    <a href="{{ route('settings') }}"><i class="fa fa-building"></i> <span>Company Settings</span></a>
+                <li class="@if(request()->route()->getName()=='company-settings.index') active @endif">
+                    <a href="{{ route('company-settings.index') }}"><i class="fa fa-building"></i> <span>Company Settings</span></a>
                 </li>
                 <li class="@if(request()->route()->getName()=='localization-settings.index') active @endif">
                     <a href="{{ route('localization-settings.index') }}"><i class="fa fa-clock-o"></i> <span>Localization</span></a>
