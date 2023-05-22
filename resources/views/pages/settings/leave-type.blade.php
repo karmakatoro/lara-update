@@ -4,7 +4,7 @@
             <h4 class="page-title">Leave Type</h4>
         </div>
         <div class="col-sm-4 col-7 text-right m-b-30">
-            <a href="add-leave-type.html" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Leave Type</a>
+            <a href="{{ route('leave-type-settings.create') }}" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Leave Type</a>
         </div>
     </div>
     <div class="row">
@@ -108,3 +108,4 @@
         </div>
     </div>
 </div>
+
