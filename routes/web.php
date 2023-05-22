@@ -50,6 +50,7 @@ Route::resource('/salary-settings', SalarySettingsController::class);
 Route::resource('/notifications-settings', NotificationsSettingsController::class);
 Route::resource('/leave-type-settings', LeaveTypeController::class);
 Route::get('/change-password-settings', [AuthController::class, 'show_change_password'])->name('change-password-settings');
+Route::post('/change-password', [AuthController::class, 'change_password'])->name('change-password');
 
 
 
