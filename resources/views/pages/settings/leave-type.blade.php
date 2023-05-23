@@ -26,16 +26,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($leaveTypes as $leaveType )
                         <tr>
                             <td>
-                                1
+                                {{ $leaveType->id }}
                             </td>
-                            <td>Casual Leave</td>
-                            <td>12 Days</td>
+                            <td>{{ $leaveType->name }}</td>
+                            <td>{{ $leaveType->days }}</td>
                             <td>
                                 <div class="dropdown action-label">
                                     <a class="custom-badge status-green dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                        Active
+                                        {{ Str::ucfirst($leaveType->status)  }}
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a href="#" class="dropdown-item">Active</a>
@@ -47,66 +48,14 @@
                                 <div class="dropdown dropdown-action">
                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="edit-leave-type.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                        <a class="dropdown-item" href="{{ route('leave-type-settings.edit', $leaveType) }}"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_leavetype"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                2
-                            </td>
-                            <td>Medical Leave</td>
-                            <td>12 Days</td>
-                            <td>
-                                <div class="dropdown action-label">
-                                    <a class="custom-badge status-red dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                        Inactive
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Active</a>
-                                        <a class="dropdown-item" href="#">Inactive</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <div class="dropdown dropdown-action">
-                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="edit-leave-type.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_leavetype"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3
-                            </td>
-                            <td>Loss of Pay</td>
-                            <td>-</td>
-                            <td>
-                                <div class="dropdown action-label">
-                                    <a class="custom-badge status-green dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                        Active
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Active</a>
-                                        <a class="dropdown-item" href="#">Inactive</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-right">
-                                <div class="dropdown dropdown-action">
-                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="edit-leave-type.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_leavetype"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

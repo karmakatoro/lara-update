@@ -31,6 +31,7 @@
     <script src="{{ asset('assets/js/chart.js') }}"></script>
     <script src="{{ asset('assets/js/select2.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/ajax.js') }}"></script>
 
 </body>
 

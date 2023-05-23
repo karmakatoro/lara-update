@@ -13,7 +13,8 @@ class LeaveTypeController extends Controller
      */
     public function index()
     {
-        return view('pages.settings.leave-type');
+        $leaveTypes = LeaveType::all();
+        return view('pages.settings.leave-type', compact('leaveTypes'));
     }
 
     /**
@@ -29,7 +30,12 @@ class LeaveTypeController extends Controller
      */
     public function store(StoreLeaveTypeRequest $request)
     {
-        //
+        LeaveType::create([
+            'name' => $request->name,
+            'days' => $request->days,
+            'status' => 'active'
+        ]);
+        return redirect()->route('leave-type-settings.create')->with('success', 'Leave type created');
     }
 
     /**
@@ -45,7 +51,7 @@ class LeaveTypeController extends Controller
      */
     public function edit(LeaveType $leaveType)
     {
-        //
+        return view('pages.settings.edit-leave-type', compact('leaveType'));
     }
 
     /**
@@ -53,7 +59,9 @@ class LeaveTypeController extends Controller
      */
     public function update(UpdateLeaveTypeRequest $request, LeaveType $leaveType)
     {
-        //
+        $leaveType->update($request->all());
+
+        return redirect()->route('leave-type-settings.edit')->with('success', 'Updated successfully');
     }
 
     /**
