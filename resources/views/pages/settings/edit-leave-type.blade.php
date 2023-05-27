@@ -1,6 +1,6 @@
 @extends('pages.settings')
 
-@section('title', 'Leave Type | '.env('APP_NAME'))
+@section('title', 'Leave Type - Edit | '.env('APP_NAME'))
 
 @section('subcontent')
 <div class="content">
@@ -16,7 +16,7 @@
                 {{ session()->get('success') }}
             </div>
             @endif
-            <form method="post" action="">
+            <form method="post" action="{{ route('leave-type-settings.update', $leaveType) }}">
                 @csrf
                 @method('put')
                 <div class="form-group">
