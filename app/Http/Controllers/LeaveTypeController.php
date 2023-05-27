@@ -35,7 +35,8 @@ class LeaveTypeController extends Controller
             'days' => $request->days,
             'status' => 'active'
         ]);
-        return redirect()->route('leave-type-settings.create')->with('success', 'Leave type created');
+        // return redirect()->route('leave-type-settings.create')->with('success', 'Leave type created');
+        return response()->json(['success'=>'Post created successfully']);
     }
 
     /**
