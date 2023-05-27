@@ -9,7 +9,7 @@
             <h4 class="page-title">Leave Type</h4>
         </div>
         <div class="col-sm-4 col-7 text-right m-b-30">
-            <a href="{{ route('leave-type-settings.create') }}" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Leave Type</a>
+            <a href="#"data-toggle="modal" data-target="#add_leave-type" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Leave Type</a>
         </div>
     </div>
     <div class="row">
@@ -59,6 +59,52 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade none-border" id="add_leave-type">
+    <div class="modal-dialog">
+        <div class="modal-content modal-md">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Leave Type</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        @if(session()->has('success'))
+
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            {{ session()->get('success') }}
+                        </div>
+                        @endif
+                        <form method="POST" action="{{ route('leave-type-settings.store') }}">
+                            @csrf
+                            <div class="form-group">
+                                <label>Leave Type <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" name="name">
+                                @if($errors->has('name'))
+                                <span class="text-danger mt-2">{{ $errors->first('name') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label>Number of days <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" name="days">
+                                @if($errors->has('days'))
+                                <span class="text-danger mt-2">{{ $errors->first('days') }}</span>
+                                @endif
+                            </div>
+                            <div class="m-t-20 text-center">
+                                <button type="submit" class="btn btn-primary submit-btn">Add Leave Type</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary submit-btn save-event">Add</button>
+                <button type="button" class="btn btn-danger btn-lg delete-event" data-dismiss="modal">Delete</button>
+            </div> --}}
         </div>
     </div>
 </div>
