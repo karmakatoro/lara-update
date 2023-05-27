@@ -1,6 +1,6 @@
 @extends('pages.settings')
 
-@section('title', 'Leave Type | '.env('APP_NAME'))
+@section('title', 'Leave Type - Add | '.env('APP_NAME'))
 
 @section('subcontent')
 <div class="content">
