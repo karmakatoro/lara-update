@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <label>Number of days <span class="text-danger">*</span></label>
-                    <input class="form-control" type="text" name="days" value="{{ $leaveType->name }}">
+                    <input class="form-control" type="text" name="days" value="{{ $leaveType->days }}">
                     @if($errors->has('days'))
                     <span class="text-danger mt-2">{{ $errors->first('days') }}</span>
                     @endif
