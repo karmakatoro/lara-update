@@ -5,6 +5,7 @@ Version      : 1.0
 */
 $(document).ready(function($) {
 
+
 	// Variables declarations
 	var $wrapper = $('.main-wrapper');
 	var $pageWrapper = $('.page-wrapper');
